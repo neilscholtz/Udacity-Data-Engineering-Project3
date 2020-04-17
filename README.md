@@ -1,4 +1,5 @@
 # Data Warehouse Design Using AWS S3 and AWS Redshift
+![Amazon Redshift](./img/amazon_redshift_logo.png)
 ## Quickstart:
 1. Update the 'dwh.cfg' file:
 - Add in your AWS KEY
@@ -42,6 +43,7 @@ Sparkify requires analysis on its song plays.
 
 ## Model suggestion:
 The current star schema has been suggested, which would allow for analysis on the song plays and would allow for further segmentation and filtering based on the dimensions:
+![SparkifyDB schema as ER Diagram](./img/database_model.png)
 ### Fact Tables:
 - song_plays (event data of each song play)
 ### Dimension Tables:
@@ -50,7 +52,7 @@ The current star schema has been suggested, which would allow for analysis on th
 - songs (which songs are more popular)
 - time (how frequently are users interacting with their app)
 
-![SparkifyDB schema as ER Diagram](./img/database_model.png)
+
 
 ## AWS Redshift Optimization
 It was decided to further optimize the database by creating appropriate DISTKEY & SORTKEY's. 
